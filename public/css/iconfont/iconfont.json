@@ -1,0 +1,184 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "113699",
+      "name": "店铺",
+      "font_class": "shop",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "577334",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e736",
+      "unicode_decimal": 59190
+    },
+    {
+      "icon_id": "681163",
+      "name": "垃圾桶",
+      "font_class": "lajitong",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    },
+    {
+      "icon_id": "791886",
+      "name": "会话",
+      "font_class": "huihua-copy",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "840782",
+      "name": "小米",
+      "font_class": "xiaomi",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "949557",
+      "name": "店铺",
+      "font_class": "dianpu1",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "1092152",
+      "name": "垃圾桶",
+      "font_class": "lajitong1",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "1166193",
+      "name": "本子",
+      "font_class": "benzi",
+      "unicode": "e79c",
+      "unicode_decimal": 59292
+    },
+    {
+      "icon_id": "1638197",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "3550768",
+      "name": "左箭头",
+      "font_class": "ico_leftarrow",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "3874042",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "4183343",
+      "name": "AK-LV砖石",
+      "font_class": "lv_zuanshi",
+      "unicode": "e564",
+      "unicode_decimal": 58724
+    },
+    {
+      "icon_id": "4272328",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "4550493",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "5334168",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "5809234",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "5849184",
+      "name": "购物车",
+      "font_class": "gouwuche1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6331958",
+      "name": "垃圾桶",
+      "font_class": "lajitong2",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "8236037",
+      "name": "眼睛",
+      "font_class": "yanjing",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "11372772",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "12975025",
+      "name": "购物车",
+      "font_class": "gouwuche2",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "14295709",
+      "name": "购物车",
+      "font_class": "gouwuche3",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "14435324",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "14964159",
+      "name": "登录灰色",
+      "font_class": "dengluhuise",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "15695373",
+      "name": "内存卡",
+      "font_class": "neicunka",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    }
+  ]
+}
