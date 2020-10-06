@@ -20,17 +20,7 @@
         <!-- <Nav></Nav> -->
     <main>
       <section>
-        <!-- 头部结束 -->
-        <!-- 总导航 -->
-        <!-- <div class="big_nav">
-          <ul>
-            <li>小米</li>
-            <li>红米</li>
-          </ul>
-        </div>
-        <router-view></router-view> -->
         
-        <!-- <mt-search v-model="value" :result.sync="result"></mt-search>   -->
         <!-- 轮播图 -->
         <mt-swipe :auto="4000" style="height:188px" class="swipe-magin">
           <mt-swipe-item style="height:188px">

@@ -4,10 +4,10 @@
     <div class="logoImg">
       <i class="iconfont icon-xiaomi"></i>
     </div>
-   <h2>小米账号登录</h2>
+   <h2>小米账号注册</h2>
    <div class="login-form">
           <label for="" class="labelbox">
-            <input class="item-account" type="text" name="user" autocomplete="off" placeholder="邮箱/手机号码/小米ID" maxlength="11" v-model="myName">
+            <input class="item-account" type="text" name="user" autocomplete="off" placeholder="邮箱/手机号码" v-model="myName" maxlength="11">
           </label>
           <label for="" class="labelbox">
             <input class="item-account" type="password" name="password" autocomplete="off" placeholder="密码" v-model="myPassWord">
@@ -17,16 +17,15 @@
           </label>
         </div>
         <div class="btnLogin">
-          <input type="button" class="btn-login" value="登录" @click="login">
+          <input type="button" class="btn-login" value="注册" @click="login">
         </div>
         <div class="btnBack">
-          <input type="button" class="btn-back" value="注册" @click="goRegister">
+          <input type="button" class="btn-back" value="返回" @click="back">
         </div>
   </div>
 </template>
 
 <script>
-/// token "36419c604878bf5e52f0c41b0b529ba3"  用户名 13131313131  密码  admin
 import axios from 'axios'
 export default {
   data() {
@@ -34,7 +33,6 @@ export default {
     return {
       myName: '',
       myPassWord: ''
-     
     };
   },
   //监听属性 类似于data概念
@@ -44,34 +42,39 @@ export default {
   //方法集合
   methods: {
     login(){
-        // alert("即将登录")
+        // alert(111);
+        // alert(this.myName);
+        // alert(this.myPassWord);
         var reg1=/^1[34578]\d{9}$/;//电话号码
         if(reg1.test(this.myName)==true){
           // alert("手机号输入正确");
           var reg2=/^[A-Za-z0-9]+$/;//由数字和26个英文字母组成的字符串
            if(reg2.test(this.myPassWord)==true){
             //  alert("密码输入正确");
-             //进行调用登录的接口
-        axios.get("http://jx.xuzhixiang.top/ap/api/login.php",{
-            username:this.myName,
-            password:this.myPassWord
-        }).then(res=>{
-          console.log(res.data);
-          location.href="../home"+"?"+this.myName
-          // alert("登录成功")
-        }
-        )
+             //进行调用注册的接口
+             axios.get("http://jx.xuzhixiang.top/ap/api/reg.php",{
+               username:this.myName,
+               password:this.myPassWord
+             }).then( res=>{
+               alert("注册成功")
+              console.log(res.data);
+              location.href="../login"
+             }
+               ).then(
+                //  alert("请登录"),
+                 location.href="../login"
+                 )
            }else{
              alert("密码输入错误");
            }
         }else{
-          alert("请输入正确的用户名和密码")
+          alert("请输入正确的用户名")
         }
 
-      
     },
-    goRegister(){
-      this.$router.push({path: 'register'});
+    back(){
+      // this.$router.push({path: 'mine'});
+      location.href="../login"
     }
   },
   

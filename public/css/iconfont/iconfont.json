@@ -69,6 +69,20 @@
       "unicode_decimal": 58892
     },
     {
+      "icon_id": "2668395",
+      "name": "修改",
+      "font_class": "xiugai",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "2681678",
+      "name": "待收货",
+      "font_class": "daishouhuo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "3550768",
       "name": "左箭头",
       "font_class": "ico_leftarrow",
@@ -111,6 +125,13 @@
       "unicode_decimal": 58904
     },
     {
+      "icon_id": "5390962",
+      "name": "代付款",
+      "font_class": "daifukuan",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
       "icon_id": "5809234",
       "name": "右箭头",
       "font_class": "youjiantou",
@@ -132,6 +153,13 @@
       "unicode_decimal": 58978
     },
     {
+      "icon_id": "7015508",
+      "name": "服务中心",
+      "font_class": "fuwuzhongxin",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
       "icon_id": "8236037",
       "name": "眼睛",
       "font_class": "yanjing",
@@ -139,11 +167,32 @@
       "unicode_decimal": 59001
     },
     {
+      "icon_id": "8666844",
+      "name": "优惠券",
+      "font_class": "youhuiquan",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "10262050",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "11372772",
       "name": "闪电",
       "font_class": "shandian",
       "unicode": "e8c5",
       "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "12240038",
+      "name": "会员",
+      "font_class": "huiyuan",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
     },
     {
       "icon_id": "12975025",

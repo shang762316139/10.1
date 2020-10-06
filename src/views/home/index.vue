@@ -34,49 +34,7 @@
           </ul>
         </div>
         <router-view></router-view>
-        
-        <!-- <mt-search v-model="value" :result.sync="result"></mt-search>   -->
-        <!-- 轮播图 -->
-        <!-- <mt-swipe :auto="4000" style="height:188px" class="swipe-magin">
-          <mt-swipe-item style="height:188px">
-            <img src="../../assets/1.jpg" alt class="swipe_img" />
-          </mt-swipe-item>
-          <mt-swipe-item>
-            <img src="../../assets/2.jpg" alt class="swipe_img" />
-          </mt-swipe-item>
-        </mt-swipe> -->
-        <!-- 轮播图结束 -->
-        <!-- 小导航 -->
-        <!-- <div class="xiao_nav">
-          <ul>
-            <li v-for="(item,index) in list" :key="index">
-              <a href>
-                <img :src="item.imgurl" />
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <!-- 小导航结束 -->
-        <!-- 每日精选和超值推荐 -->
-        <!-- <ul class="tuijian_ul">
-          <li v-for="(item2,index) in tuijianList" :key="index">
-            <img :src="item2.imgurl" />
-          </li>
-        </ul> -->
-        <!-- 每日精选和超值推荐结束 -->
-        <!-- 下面的列表 -->
-        <!-- <ul class="list_ul">
-          <li v-for="(item3,index) in list_ulList" :key="index">
-            <div class="one1">
-              <img :src="item3.imgurl" alt />
-            </div>
-            <div class="two2">
-              <div class="title">{{item3.title}}</div>
-              <div class="brief">{{item3.brief}}</div>
-              <div class="price">{{item3.price}}</div>
-            </div>
-          </li>
-        </ul> -->
+         
       </section>
     </main>
     <Footer></Footer>
@@ -98,16 +56,7 @@ export default {
 
         { imgurl: require("../../assets/以旧换新.jpg") },
       ],
-      // big_navList:[
-      //   {title:"小米手机"},
-      //   {title:"Redmin红米手机"},
-      //   {title:"电视"},
-      //   {title:"笔记本"},
-      //   {title:"家电"},
-      //   {title:"路由器"},
-      //   {title:"只能硬件"},
-      //   {title:"服务"},
-      // ],
+      
       tuijianList: [
         { imgurl: require("../../assets/meirijingxuan.jpg") },
         { imgurl: require("../../assets/chaozhituijian.jpg") },

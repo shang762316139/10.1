@@ -17,24 +17,6 @@ body {
     height: 100%;
 }
 
-
-/* 禁止用户拖拽大小 */
-
-
-/* textarea {
-    
-    resize: none;
-}
-
-html {
-    font-size: 26.666667vw;
-}
-
-html,
-body {
-    height: 100vh;
-} */
-
 .clearfix:after {
     content: "";
     display: block;
@@ -252,8 +234,6 @@ body {
     font-weight: normal;
 }
 
-.city_body .city_hot ul {}
-
 .city_body .city_hot ul li {
     float: left;
     background: #fff;
@@ -268,8 +248,6 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
-
-.city_body .city_sort {}
 
 .city_body .city_sort div {
     margin-top: 20px;
@@ -337,16 +315,12 @@ body {
     width: 100%;
 }
 
-.search_body .search_result {}
-
 .search_body .search_result h3 {
     font-size: 15px;
     color: #999;
     padding: 9px 15px;
     border-bottom: 1px solid #e6e6e6;
 }
-
-.search_body .search_result ul {}
 
 .search_body .search_result li {
     border-bottom: 1px #c9c9c9 dashed;
