@@ -21,13 +21,18 @@
             </div>
             <div class="list-div2">
               <p>售价：</p>
-              <p>799元</p>
+              <p>{{price}}</p>
             </div>
             <div class="list-div4">
               <div class="list-div3">
-                <span  @click="jianshao">-</span>
+                <!-- <span  @click="jianshao">-</span>
                 <span class="shuliang">1</span>
-                <span @click="zhengjia">+</span>
+                <span @click="zhengjia">+</span>-->
+                <button @click="$store.commit('reduce')" class="btn-minus">-</button>
+                <span class="buy-count-num">{{$store.state.num}}</span>
+                
+                <button @click="$store.commit('add')" class="btn-add">+</button>
+
                 <input type="button" name id value="删除" />
               </div>
             </div>
@@ -37,9 +42,9 @@
     </div>
     <div class="totalPrice">
       <div class="total-wrap">
-        <span>件数：2</span>
+        <span>{{$store.state.num}}件</span>
         <span>总金额：</span>
-        <span>4098元</span>
+        <span>{{price*$store.state.num}}元</span>
         <input type="button" value="结算" />
       </div>
     </div>
@@ -104,30 +109,43 @@
 
 <script>
 import Footer from "../../components/Footer";
+import store from "../../store"
 export default {
   data() {
     //这里存放数据
-    return {};
+    return {
+      allCount:1,
+      price:688,
+    };
   },
   //监听属性 类似于data概念
   computed: {},
   //监控data中的数据变化
   watch: {},
-  //方法集合 
+  //方法集合
   methods: {
-    jianshao(){
-      // alert(111)
-      this.$store.state.count--
-    },
-    zhengjia(){
-      this.$store.state.count++
-    }, back(){
+    // jianshao() {
+    //   // alert(111)
+    //   this.$store.state.count--;
+    // },
+    // zhengjia() {
+    //   this.$store.state.count++;
+    // },
+    back() {
       // 返回上一页
       this.$router.go(-1);
     },
   },
   //生命周期 - 创建完成（可以访问当前this实例）
-  created() {},
+  created() {
+    //判断本地有没有存购物车里面的东西
+    // var totalCount=location.getItem("counts")
+    // if(!totalCount){
+    //   totalCount=1;
+    //   location.setItem("counts",1)
+    // }
+    // this.allCount=totalCount
+  },
   //生命周期 - 挂载完成（可以访问DOM元素）
   mounted() {},
   beforeCreate() {}, //生命周期 - 创建之前
@@ -139,7 +157,9 @@ export default {
   activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
   components: {
     Footer,
+  
   },
+    store,
 };
 </script>
 <style scoped>
@@ -266,21 +286,19 @@ export default {
   height: 55px;
   float: left;
   line-height: 55px;
-  border-top:solid 15px #f2f2f2;
- 
+  border-top: solid 15px #f2f2f2;
 }
 .total-wrap span:nth-child(1) {
-  margin-left:10px;
-  font-size:18px
+  margin-left: 10px;
+  font-size: 18px;
 }
 .total-wrap span:nth-child(2) {
   margin: 0 7px;
-  font-size:18px
+  font-size: 18px;
 }
 .total-wrap span:nth-child(3) {
   color: #ff6700;
-  font-size:18px;
-  
+  font-size: 18px;
 }
 .total-wrap input {
   width: 100px;
@@ -288,8 +306,8 @@ export default {
   background: #ff6700;
   color: white;
   border: none;
-  font-size:18px;
-  margin-left:35px
+  font-size: 18px;
+  margin-left: 35px;
 }
 .guess-img {
   width: 100%;

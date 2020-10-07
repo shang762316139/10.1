@@ -51,9 +51,9 @@
         <!-- 每日精选和超值推荐结束 -->
         <!-- 下面的列表 -->
         <ul class="list_ul">
-          <li v-for="(item3,index) in list_ulList" :key="index">
-            <div class="one1">
-              <img :src="item3.imgurl" alt />
+          <li v-for="(item3,index) in list_ulList" :key="index" @click="tiao(index)">
+            <div class="one1" >
+              <img :src='item3.imgurl' alt />
             </div>
             <div class="two2">
               <div class="title">{{item3.title}}</div>
@@ -69,6 +69,7 @@
 </template>
 
 <script>
+ import axios from "axios"
 import Footer from "../../../components/Footer";
 // import Nav from "../../components/Zongnav";
 export default {
@@ -83,57 +84,48 @@ export default {
 
         { imgurl: require("../../../assets/以旧换新.jpg") },
       ],
-      // big_navList:[
-      //   {title:"小米手机"},
-      //   {title:"Redmin红米手机"},
-      //   {title:"电视"},
-      //   {title:"笔记本"},
-      //   {title:"家电"},
-      //   {title:"路由器"},
-      //   {title:"只能硬件"},
-      //   {title:"服务"},
-      // ],
+     
       tuijianList: [
         { imgurl: require("../../../assets/meirijingxuan.jpg") },
         { imgurl: require("../../../assets/chaozhituijian.jpg") },
       ],
       list_ulList: [
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
+        // {
+        //   imgurl: require("../../../assets/hongmi5.jpg"),
+        //   title: "九号平衡车",
+        //   brief: "年轻人的酷玩具",
+        //   price: "￥1999",
+        // },
       ],
     };
   },
@@ -142,11 +134,36 @@ export default {
   //监控data中的数据变化
   watch: {},
   //方法集合
-  methods: {},
+  methods: {
+    tiao(index){
+      // location.href="../xiangqing"
+       this.$router.push({  // 路由跳转传参
+        path: '../../datails',
+        query: {
+          id: index
+        }
+      })
+    }
+  },
   //生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   //生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {},
+  mounted() {
+
+    //请求接口
+      axios.get("/api/proList").then((res) => {
+   console.log(res)
+       console.log(res.data.proList[0].imgurl)
+      // console.log(res.data.proList.title)
+      for(var i=0;i<res.data.proList.length;i++){
+        res.data.proList[i].imgurl="http://localhost:3333"+res.data.proList[i].imgurl
+      }
+      this.list_ulList=res.data.proList
+       
+      console.log(this.list_ulList)
+
+    });
+  },
   beforeCreate() {}, //生命周期 - 创建之前
   beforeMount() {}, //生命周期 - 挂载之前
   beforeUpdate() {}, //生命周期 - 更新之前

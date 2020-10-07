@@ -1,20 +1,54 @@
-const express = require('express')
-const app = new express()
-const cors = require('cors')
+const express = require("express");
+const app = new express();
+app.use('/assets', express.static('assets'))
+    // const cors = require('cors')
 
-
-app.use(cors())
-
+// app.use(cors())
+// app.use(express.static())
 //获取商品分类列表
-app.get('/proList', (req, res) => {
+app.get("/proList", (req, res) => {
     res.json({
         code: 200,
-        proList: {
-            title: '小米手机',
-            proImg: "../src/assets/hongmi5.jpg",
-            price: 1999
-        }
-    })
-})
+        proList: [{
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机1",
+                brief: "年轻人的酷玩具",
+                price: 1999,
+            },
+            {
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机2",
+                brief: "年轻人的酷玩具",
+                price: 2999,
+            },
+            {
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机3",
+                brief: "年轻人的酷玩具",
+                price: 2999,
+            },
+            {
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机4",
+                brief: "年轻人的酷玩具",
+                price: 2999,
+            },
+            {
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机5",
+                brief: "年轻人的酷玩具",
+                price: 2999,
+            },
+            {
+                imgurl: "/assets/hongmi5.jpg",
+                title: "小米手机6",
+                brief: "年轻人的酷玩具",
+                price: 2999,
+            },
+        ],
+    });
+});
 
-app.listen(3333, '127.0.0.1')
+
+
+app.listen(3333, "127.0.0.1");

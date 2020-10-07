@@ -15,7 +15,7 @@
 					<i class="iconfont icon-gouwuche2"></i>
 					<p>购物车</p>
 				</router-link>
-                <router-link tag="li" to="/login">
+                <router-link tag="li" to="/mine">
 					<i class="iconfont icon-wode"></i>
 					<p>我的</p>
 				</router-link>

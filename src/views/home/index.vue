@@ -23,7 +23,7 @@
         <!-- 头部结束 -->
         <!-- 总导航 -->
         <div class="big_nav">
-          <ul>
+          <ul> 
             <router-link tag="li" to="/home/tuijian">推荐</router-link>
             <router-link tag="li" to="/home/xiaomishouji">小米</router-link>
             <router-link tag="li" to="/home/hongmi">红米</router-link>
@@ -57,48 +57,48 @@ export default {
         { imgurl: require("../../assets/以旧换新.jpg") },
       ],
       
-      tuijianList: [
-        { imgurl: require("../../assets/meirijingxuan.jpg") },
-        { imgurl: require("../../assets/chaozhituijian.jpg") },
-      ],
-      list_ulList: [
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-        {
-          imgurl: require("../../assets/hongmi5.jpg"),
-          title: "九号平衡车",
-          brief: "年轻人的酷玩具",
-          price: "￥1999",
-        },
-      ],
+      // tuijianList: [
+      //   { imgurl: require("../../assets/meirijingxuan.jpg") },
+      //   { imgurl: require("../../assets/chaozhituijian.jpg") },
+      // ],
+      // list_ulList: [
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      //   {
+      //     imgurl: require("../../assets/hongmi5.jpg"),
+      //     title: "九号平衡车",
+      //     brief: "年轻人的酷玩具",
+      //     price: "￥1999",
+      //   },
+      // ],
     };
   },
   //监听属性 类似于data概念
@@ -193,7 +193,7 @@ section {
 //总导航
 .big_nav {
   width:100%; 
-  margin-top:60px;
+   margin-top:60px;
   height: 60px;
   
   ul {
