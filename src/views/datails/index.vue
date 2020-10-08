@@ -11,6 +11,7 @@
       </header>
       <router-view></router-view>
     </div>
+    
     <main>
       <mt-swipe :auto="4000" class="liph">
         <mt-swipe-item class="iph">
@@ -24,11 +25,17 @@
         </mt-swipe-item>
       </mt-swipe>
 
-      <div class="overview">
+      <!-- <div class="overview">
         <div class="goods-name">红米5</div>
         <div class="goods-brief">搭载了玩游戏超给力的高通骁龙处理器，后置12MP旗舰相机，前置柔光自拍，配备5.7英寸全面屏。</div>
         <div class="goods-price">￥799</div>
-      </div>
+       </div> -->
+         <div class="overview" >
+        <!-- <div>{{xianglist.imgurl}}</div>  -->
+        <div class="goods-name">{{xianglist.title}}</div>
+        <div class="goods-brief">{{xianglist.brief}}</div>
+        <div class="goods-price">{{xianglist.price}}</div>
+        </div>
 
       <div class="buy-count">
         <div class="buy-count-text">购买数量：</div>
@@ -77,6 +84,7 @@
 
 <script>
 import Vue from "vue";
+import axios from "axios"
 import { Swipe, SwipeItem } from "mint-ui";
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
@@ -84,7 +92,15 @@ Vue.component(SwipeItem.name, SwipeItem);
 import Footer from "../../components/footer-xq";
 
 import store from "../../store";
+
 export default {
+  data(){
+    
+    return{
+      xianglist:{},
+      
+    }
+  },
   methods: {
     mtoken() {
       history.back();
@@ -92,9 +108,32 @@ export default {
   },
   components: {
     Footer,
+
   },
   name: "shortcut",
   store,
+  mounted(){
+     let newid=this.$route.query.id
+     console.log(newid)
+      axios.get("/api/proList",{
+        params:{
+          id:newid
+        }
+      }).then((res)=>{
+        // console.log(res)
+        console.log(res)
+        for(let i=0;i<res.data.proList.length;i++){
+          if(newid==res.data.proList[i].id){
+            console.log(newid)
+            this.xianglist=res.data.proList[i]
+            console.log(this.xianglist)
+          }
+        }
+        // this.xianglist=res.data.proList
+
+      })
+   
+  },
 };
 </script>
 

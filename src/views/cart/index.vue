@@ -10,27 +10,27 @@
     <!-- 列表详情开始-->
     <div class="list">
       <ul>
-        <li>
+        <li style="margin-top: 50px">
+           <!-- <cart></cart>   -->
           <div class="list-box1">
             <input type="checkbox" name id />
           </div>
           <div class="list-box2"></div>
           <div class="list-box3">
             <div class="list-div1">
-              <p>红米 5</p>
+               <p>红米 5</p>  
+              
             </div>
             <div class="list-div2">
               <p>售价：</p>
               <p>{{price}}</p>
             </div>
+            
             <div class="list-div4">
               <div class="list-div3">
-                <!-- <span  @click="jianshao">-</span>
-                <span class="shuliang">1</span>
-                <span @click="zhengjia">+</span>-->
                 <button @click="$store.commit('reduce')" class="btn-minus">-</button>
                 <span class="buy-count-num">{{$store.state.num}}</span>
-                
+
                 <button @click="$store.commit('add')" class="btn-add">+</button>
 
                 <input type="button" name id value="删除" />
@@ -38,6 +38,7 @@
             </div>
           </div>
         </li>
+           
       </ul>
     </div>
     <div class="totalPrice">
@@ -47,7 +48,12 @@
         <span>{{price*$store.state.num}}元</span>
         <input type="button" value="结算" />
       </div>
+      
     </div>
+    
+
+    <info class="i-width"></info>
+
     <div class="guess-img">
       <img
         src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e95ade2750a7fde92369b416c7d3176d.jpg"
@@ -109,13 +115,16 @@
 
 <script>
 import Footer from "../../components/Footer";
-import store from "../../store"
+import store from "../../store";
+ 
 export default {
+  totalNum: "",
+  totalPrice: "",
   data() {
     //这里存放数据
     return {
-      allCount:1,
-      price:688,
+      allCount: 1,
+      price: 688,
     };
   },
   //监听属性 类似于data概念
@@ -157,12 +166,16 @@ export default {
   activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
   components: {
     Footer,
-  
+   
   },
-    store,
+  store,
 };
 </script>
 <style scoped>
+.i-width{
+  width:100%;
+  margin-top: 50px
+}
 .header {
   width: 100%;
   height: 40px;

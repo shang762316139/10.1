@@ -51,7 +51,7 @@
         <!-- 每日精选和超值推荐结束 -->
         <!-- 下面的列表 -->
         <ul class="list_ul">
-          <li v-for="(item3,index) in list_ulList" :key="index" @click="tiao(index)">
+          <li v-for="(item3,index) in list_ulList" :key="index" @click="tiao(item3)">
             <div class="one1" >
               <img :src='item3.imgurl' alt />
             </div>
@@ -67,6 +67,7 @@
     <Footer></Footer>
   </div>
 </template>
+
 
 <script>
  import axios from "axios"
@@ -135,14 +136,15 @@ export default {
   watch: {},
   //方法集合
   methods: {
-    tiao(index){
+    tiao(item3){
       // location.href="../xiangqing"
        this.$router.push({  // 路由跳转传参
         path: '../../datails',
         query: {
-          id: index
+          id: item3.id
         }
       })
+      
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）

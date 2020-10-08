@@ -25,8 +25,22 @@ export default {
       this.$router.push({
         // 路由跳转传参
         path: "/cart",
+         
       });
     },
+    // Cart(state, goods) {
+    //   var flag = false; //购物车没有商品
+    //   state.car.some((item) => {
+    //     if (item.id == goods.id) {
+    //       item.count += parseInt(goods.count);
+    //       flag=true;
+    //       return true;
+    //     }
+    //   })
+    //   if(!flag){
+    //     state.car.push(goods)
+    //   }
+    // },
     shouye() {
       this.$router.push({
         // 路由跳转传参
